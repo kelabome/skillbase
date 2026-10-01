@@ -1,0 +1,63 @@
+{
+  "name": "@kelabome/skillbase",
+  "version": "0.1.0",
+  "description": "Local semantic search over shared git skill repos, served to Claude Code, Codex and OpenCode as an MCP server",
+  "keywords": [
+    "mcp",
+    "skills",
+    "agent-skills",
+    "claude-code",
+    "codex",
+    "opencode",
+    "semantic-search"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kelabome/skillbase.git"
+  },
+  "homepage": "https://github.com/kelabome/skillbase#readme",
+  "bugs": {
+    "url": "https://github.com/kelabome/skillbase/issues"
+  },
+  "type": "module",
+  "bin": {
+    "skillbase": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "sources.yaml",
+    "README.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && chmod +x dist/cli.js",
+    "dev": "tsx src/cli.ts",
+    "test": "node --import tsx --test test/*.test.ts",
+    "eval": "tsx test/eval.ts",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.31.0",
+    "minisearch": "^7.2.0",
+    "yaml": "^2.9.1",
+    "zod": "^3.25.76"
+  },
+  "optionalDependencies": {
+    "@huggingface/transformers": "^4.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.0"
+  }
+}

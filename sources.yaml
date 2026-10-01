@@ -1,0 +1,30 @@
+# DEFAULT skill repositories: everyone who installs skillbase searches these.
+# Change this file by PR. People pick up changes with `make update`.
+# Personal extras go in ~/.skillbase/sources.yaml (`skillbase sources add <git-url>`).
+#
+# Each entry is a git repo with */SKILL.md folders at any depth.
+#   name:   short id, used in skill ids ("<name>:<folder>")   (default: repo name)
+#   url:    anything `git clone` accepts
+#   branch: optional, default = the remote's default branch
+#   path:   optional, only look under this sub-directory
+sources:
+  # Anthropic's official example skills (docx, pdf, pptx, xlsx, skill-creator, mcp-builder, ...)
+  - name: anthropic-skills
+    url: https://github.com/anthropics/skills.git
+    branch: main
+    path: skills
+  # OpenAI's curated Codex skills (the .system folder is left out on purpose)
+  - name: openai-skills
+    url: https://github.com/openai/skills.git
+    branch: main
+    path: skills/.curated
+  # Superpowers: brainstorming, TDD, systematic debugging, planning, code review workflows
+  - name: superpowers
+    url: https://github.com/obra/superpowers.git
+    branch: main
+    path: skills
+  # Vercel's agent skills (React/Next.js best practices, web design guidelines, deploy)
+  - name: vercel-skills
+    url: https://github.com/vercel-labs/agent-skills.git
+    branch: main
+    path: skills
