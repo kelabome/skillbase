@@ -3,6 +3,15 @@
 All notable changes to skillbase. The format follows [Keep a Changelog](https://keepachangelog.com/),
 and the project uses [semantic versioning](https://semver.org/).
 
+## [0.1.1] - 2026-10-07
+
+### Changed
+
+- The README opens with what sets skillbase apart. Any number of shared skills costs the agent no
+  extra context, because nothing enters it until you pick a skill. Search finds a skill by meaning,
+  not by shared words, using a model that runs locally.
+- npm description and keywords say the same, so the package can be found by what it does.
+
 ## [0.1.0] - 2026-10-01
 
 First release.

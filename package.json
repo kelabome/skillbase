@@ -1,6 +1,6 @@
 {
   "name": "@kelabome/skillbase",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Find agent skills by meaning, not keywords: local semantic search over shared git skill repos for Claude Code, Codex and OpenCode. An MCP server that keeps any number of skills out of your agent's context until you pick one.",
   "keywords": [
     "mcp",
