@@ -1,15 +1,28 @@
 {
   "name": "@kelabome/skillbase",
   "version": "0.1.0",
-  "description": "Local semantic search over shared git skill repos, served to Claude Code, Codex and OpenCode as an MCP server",
+  "description": "Find agent skills by meaning, not keywords: local semantic search over shared git skill repos for Claude Code, Codex and OpenCode. An MCP server that keeps any number of skills out of your agent's context until you pick one.",
   "keywords": [
     "mcp",
+    "mcp-server",
+    "model-context-protocol",
     "skills",
     "agent-skills",
+    "claude-skills",
+    "skill-md",
+    "skills-registry",
     "claude-code",
     "codex",
     "opencode",
-    "semantic-search"
+    "ai-agents",
+    "coding-agent",
+    "semantic-search",
+    "embeddings",
+    "vector-search",
+    "local-first",
+    "context-window",
+    "context-engineering",
+    "prompt-engineering"
   ],
   "license": "MIT",
   "repository": {

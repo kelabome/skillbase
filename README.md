@@ -2,6 +2,29 @@
 
 Search and use shared agent skills from public (or your own) git repos, from **Claude Code, Codex and OpenCode**.
 
+## Why skillbase
+
+**More skills never cost your agent more context.** Installed skills are normally listed in the
+agent's context on every turn, so each one you add makes that list longer and the useful ones harder
+to pick out. Skillbase keeps shared skills out of that list entirely. All the agent ever sees is four
+small tools and a few lines of instructions. That cost is the same whether you index 80 skills or
+80,000. A skill reaches the context only after you choose it, and then only that one.
+
+**Search understands what you mean; it does not need your words to match.** Every skill is indexed by
+meaning, with a sentence-embedding model that runs locally on your machine (no API key, nothing sent
+anywhere). Describe the problem the way you would to a colleague, and the right skill comes back even
+when it shares almost no words with your request:
+
+| You ask | Skillbase finds |
+|---|---|
+| "the app feels sluggish when rendering long lists" | `vercel-skills:react-native-skills` (mobile performance) |
+| "I keep fixing the same bug, help me find the root cause" | `superpowers:systematic-debugging` |
+| "my numbers need to go in a workbook with formulas" | `anthropic-skills:xlsx` |
+
+Ranking is 95% semantic similarity, and exact keyword overlap adds only a small bonus. If the model
+cannot be downloaded, search falls back to keywords alone; `skillbase status` shows which mode you have.
+See [how search works](docs/REFERENCE.md#how-search-works).
+
 ## Concept
 
 - Shared skills live in git repos (the defaults are listed in [`sources.yaml`](sources.yaml)).
